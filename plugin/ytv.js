@@ -75,7 +75,13 @@ const song = async (m, Fox) => {
             },
             interactiveMessage: proto.Message.InteractiveMessage.create({
               body: proto.Message.InteractiveMessage.Body.create({
-                text: `Video Downloader\n*🔍Title:* ${videoDetails.title}\n*✍️ Author:* ${videoDetails.author}\n*🥸Views:* ${videoDetails.views}\n*👍 Likes:* ${videoDetails.likes}\n*📆 Upload Date:* ${videoDetails.uploadDate}\n*🏮 Duration:* ${videoDetails.duration}\n`
+                text: `Video Downloader\n
+                *🔍Title:* ${videoDetails.title}\n
+                *✍️ Author:* ${videoDetails.author}\n
+                *🥸Views:* ${videoDetails.views}\n
+                *👍 Likes:* ${videoDetails.likes}\n
+                *📆 Upload Date:* ${videoDetails.uploadDate}\n
+                *🏮 Duration:* ${videoDetails.duration}\n`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
                 text: "> ©ʀᴇᴅ-ꜰᴏx-ᴍᴅ"
@@ -141,7 +147,15 @@ const song = async (m, Fox) => {
         await Fox.sendMessage(m.from, {
           video: finalVideoBuffer,
           mimetype: 'video/mp4',
-          caption: `Title: ${selectedFormat.title}\nAuthor: ${selectedFormat.author}\nViews: ${selectedFormat.views}\nLikes: ${selectedFormat.likes}\nUpload Date: ${selectedFormat.uploadDate}\nDuration: ${duration}\nSize: ${size}\n\n> ©ʀᴇᴅ-ꜰᴏx-ᴍᴅ`
+          caption: `Title: ${selectedFormat.title}\n
+          Author: ${selectedFormat.author}\n
+          Views: ${selectedFormat.views}\n
+          Likes: ${selectedFormat.likes}\n
+          Upload Date: ${selectedFormat.uploadDate}\n
+          Duration: ${duration}\n
+          Size: ${size}\n\n
+          
+          > ©ʀᴇᴅ-ꜰᴏx-ᴍᴅ`
         }, { quoted: m });
       } catch (error) {
         console.error("Error fetching video details:", error);

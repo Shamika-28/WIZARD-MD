@@ -19,7 +19,7 @@ const handleGreeting = async (m, Wizard) => {
           if (quotedMessage.imageMessage) {
             const imageCaption = quotedMessage.imageMessage.caption;
             const imageUrl = await Wizard.downloadAndSaveMediaMessage(quotedMessage.imageMessage);
-            await Wizard.sendMessage(m.from, {image: { url: imageUrl },caption:' > Sended By Shamika_BotWa', imageCaption,
+            await Wizard.sendMessage(m.from, {image: { url: imageUrl },imageCaption, caption:' > Sended By Shamika_BotWa',
               contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 9999,
@@ -32,7 +32,7 @@ const handleGreeting = async (m, Wizard) => {
           if (quotedMessage.videoMessage) {
             const videoCaption = quotedMessage.videoMessage.caption;
             const videoUrl = await Wizard.downloadAndSaveMediaMessage(quotedMessage.videoMessage);
-            await Wizard.sendMessage(m.from, {video: { url: videoUrl },caption: ' > Sended By Shamika_BotWa', videoCaption,
+            await Wizard.sendMessage(m.from, {video: { url: videoUrl }, videoCaption, caption: ' > Sended By Shamika_BotWa',
               contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 9999,
