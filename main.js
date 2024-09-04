@@ -76,7 +76,7 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🦊using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`🧙‍♂️using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Fox = makeWASocket({
             version,
@@ -101,7 +101,7 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("🦊Successful️ ✅"));
+                    console.log(chalk.green("🧙‍♂️Successful️ ✅"));
                     Fox.sendMessage(Fox.user.id, { text: `┌─𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲
 │
 │ 𝐸𝑡ℎ𝑖𝑥 𝑆𝑖𝑑  x  𝐻𝐴𝑆𝐸𝐸𝐵
@@ -188,5 +188,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`✨️✨Server is running on port ${PORT}`);
+    console.log(`✨Server is running on port ${PORT}`);
 });
